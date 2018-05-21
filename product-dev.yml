@@ -21,5 +21,11 @@ spring:
     url: jdbc:mysql://${ali.eureka.server.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
     username: root
     password: z101496x
+#rabbitmq
+  rabbitmq:
+    username: guest
+    password: guest
+    port: 8672
+    host: ${ali.eureka.server.host}
 
 testmsg: hello
