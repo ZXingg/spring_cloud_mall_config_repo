@@ -1,1 +1,2 @@
-# spring_cloud_mall_config_repo
+# config-repo
+用来存放配置文件

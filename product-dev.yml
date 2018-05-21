@@ -1,0 +1,25 @@
+ali:
+  eureka:
+    server:
+      host: 47.100.173.161
+      port: 8761
+      username: user
+      password: user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${ali.eureka.server.username}:${ali.eureka.server.password}@${ali.eureka.server.host}:${ali.eureka.server.port}/eureka/
+
+server:
+  port: 8001
+
+spring:
+  application:
+    name: product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${ali.eureka.server.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: z101496x
+
+testmsg: hello
