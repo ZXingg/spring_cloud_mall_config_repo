@@ -1,17 +1,14 @@
 ali:
-  eureka:
-    server:
-      host: 47.100.173.161
-      port: 8761
-      username: user
-      password: user
-eureka:
-  client:
-    service-url:
-      defaultZone: http://${ali.eureka.server.username}:${ali.eureka.server.password}@${ali.eureka.server.host}:${ali.eureka.server.port}/eureka/
+  server:
+    host: 47.100.173.161
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://${ali.eureka.server.username}:${ali.eureka.server.password}@${ali.eureka.server.host}:${ali.eureka.server.port}/eureka/
 
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -20,6 +17,15 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: z101496x
-    url: jdbc:mysql://${ali.eureka.server.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://${ali.server.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
+  jpa:
+      show-sql: true  #FIXME
+      format-sql: true
+#rabbitmq
+  rabbitmq:
+    username: root
+    password: z101496x
+    port: 8672
+    host: ${ali.server.host}
 
 testmsg: hello
