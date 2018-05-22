@@ -5,7 +5,7 @@ ali:
 #eureka:
 #  client:
 #    service-url:
-#      defaultZone: http://${ali.eureka.server.username}:${ali.eureka.server.password}@${ali.eureka.server.host}:${ali.eureka.server.port}/eureka/
+#      defaultZone: http://${ali.eureka.service.username}:${ali.eureka.service.password}@${ali.eureka.service.host}:${ali.eureka.service.port}/eureka/
 
 server:
   port: 8002

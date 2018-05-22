@@ -7,7 +7,7 @@ ali:
 #eureka:
 #  client:
 #    service-url:
-#      defaultZone: http://${ali.eureka.server.username}:${ali.eureka.server.password}@${ali.eureka.server.host}:${ali.eureka.server.port}/eureka/
+#      defaultZone: http://${ali.eureka.service.username}:${ali.eureka.service.password}@${ali.eureka.service.host}:${ali.eureka.service.port}/eureka/
 #
 server:
   port: 8001
@@ -17,7 +17,7 @@ spring:
     name: product
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${ali.server.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://${ali.service.host}:3306/spring_cloud_mall?characterEncoding=utf-8&useSSL=false
     username: root
     password: z101496x
   jpa:
@@ -28,6 +28,6 @@ spring:
     username: guest
     password: guest
     port: 8672
-    host: ${ali.server.host}
+    host: ${ali.service.host}
 
 testmsg: hello
