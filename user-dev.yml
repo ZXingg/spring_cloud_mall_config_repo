@@ -12,7 +12,7 @@ server:
 
 spring:
   application:
-    name: order
+    name: user
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
